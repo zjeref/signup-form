@@ -1,0 +1,182 @@
+:root {
+  --primary: hsl(0, 100%, 74%);
+  --primary2: hsl(154, 59%, 51%);
+  --assent: hsl(248, 32%, 49%);
+  --darkblue: hsl(249, 10%, 26%);
+  --grayblue: hsl(246, 25%, 77%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--primary);
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+
+  background-image: url(./images/bg-intro-mobile.png);
+  display: flex;
+  flex-direction: column;
+  padding: 7vh 5vw;
+  align-items: center;
+}
+
+.text-area {
+  width: 100%;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.text-area h1 {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.text-area p {
+  font-size: 1rem;
+  padding: 1em;
+}
+
+.form-area {
+  width: 100%;
+}
+
+.pricing button {
+  width: 100%;
+  padding: 1em 2em;
+  color: #f2f2f2;
+  background-color: var(--assent);
+  border: 1px solid var(--assent);
+  border-radius: 10px;
+  font-size: 1.1rem;
+  margin: 1em 0;
+  box-shadow: 0px 3px 3px 0px hsl(248, 62%, 49%);
+}
+
+.pricing button span {
+  font-weight: 700;
+}
+
+form {
+  width: 100%;
+  background-color: white;
+  padding: 1.2em;
+  border-radius: 10px;
+}
+
+form input {
+  width: 100%;
+  margin: 1em auto 0.1em auto;
+  padding: 1em;
+  border: 1px solid var(--grayblue);
+  border-radius: 5px;
+}
+
+form input::placeholder {
+  color: var(--grayblue);
+  font-weight: 700;
+}
+
+form input:focus {
+  outline-color: var(--primary2);
+}
+
+.input-error {
+  border: 2px solid var(--primary);
+}
+
+.input-error:focus {
+  outline-color: var(--primary);
+}
+
+.formControl {
+  text-align: start;
+  position: relative;
+}
+
+.formControl small {
+  color: var(--primary);
+  margin-top: -2em;
+}
+
+.formControl img {
+  position: absolute;
+  right: 1em;
+  top: 1.6em;
+  opacity: 0;
+}
+
+#condition {
+  text-align: center;
+  display: block;
+  padding: 0 1em;
+  color: var(--grayblue);
+  font-size: 0.7rem;
+}
+
+form button {
+  margin: 1em auto;
+  width: 100%;
+  padding: 0.8em 2em;
+  font-size: 1.1rem;
+  color: #f2f2f2;
+  background-color: var(--primary2);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 3px 3px 0px hsl(154, 54%, 41%);
+}
+
+form button:hover {
+  background-color: hsl(154, 79%, 51%);
+}
+
+#condition a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (min-width: 769px) {
+  .container {
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .text-area {
+    align-self: center;
+    padding: 2em;
+    text-align: start;
+  }
+
+  .text-area h1 {
+    font-size: 3em;
+    font-weight: 800;
+  }
+
+  .text-area p {
+    padding: 0 20px 0 0;
+  }
+
+  .form-area {
+    padding: 2em;
+  }
+
+  form {
+    padding: 3em;
+  }
+
+  form input {
+    margin: 1em auto 0.2em auto;
+  }
+}
